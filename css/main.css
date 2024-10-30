@@ -12,95 +12,138 @@ html {
   --color-section: #f5f5f5;
   --color-shadow: rgba(0, 0, 0, 0.4);
 }
+
+html.fixed {
+  width: 100%;
+  position: fixed;
+  overflow-y: scroll;
+}
+
 body {
+  height: 10000px;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-size: 16px;
   line-height: 1;
+  color: var(--color-font);
   word-break: keep-all;
 }
+
+a {
+  text-decoration: none;
+  color: var(--color-font);
+}
+
 .info .icon.icon--chip {
   background-image: url("../images/sprite_chip.png");
 }
+
 .info .icon.icon--faster {
   background-image: url("../images/sprite_faster.png");
 }
+
 .info .icon.icon--neural {
   background-image: url("../images/sprite_neural.png");
 }
+
 .info .icon.icon--apps {
   background-image: url("../images/sprite_apps.png");
 }
+
 .info .icon.icon--battery {
   background-image: url("../images/sprite_battery.png");
 }
+
 .info .icon.icon--display {
   background-image: url("../images/sprite_display.png");
 }
+
 .info .icon.icon--true-tone {
   background-image: url("../images/sprite_true_tone.png");
 }
+
 .info .icon.icon--center-stage {
   background-image: url("../images/sprite_center_stage.png");
 }
+
 .info .icon.icon--front-camera {
   background-image: url("../images/sprite_front_camera.png");
 }
+
 .info .icon.icon--back-camera {
   background-image: url("../images/sprite_back_camera.png");
 }
+
 .info .icon.icon--scan {
   background-image: url("../images/sprite_scan.png");
 }
+
 .info .icon.icon--download {
   background-image: url("../images/sprite_download.png");
 }
+
 .info .icon.icon--wifi {
   background-image: url("../images/sprite_wifi.png");
 }
+
 .info .icon.icon--lte {
   background-image: url("../images/sprite_lte.png");
 }
+
 .info .icon.icon--pencil {
   background-image: url("../images/sprite_pencil.png");
 }
+
 .info .icon.icon--keyboard {
   background-image: url("../images/sprite_keyboard.png");
 }
+
 .info .icon.icon--notes {
   background-image: url("../images/sprite_notes.png");
 }
+
 .info .icon.icon--covers {
   background-image: url("../images/sprite_covers.png");
 }
+
 @keyframes sprite-icon {
+
   /* 1~10 */
   0.00% {
     background-position: 0 0;
   }
+
   1.67% {
     background-position: -100px 0;
   }
+
   3.33% {
     background-position: -200px 0;
   }
+
   5.00% {
     background-position: -300px 0;
   }
+
   6.67% {
     background-position: -400px 0;
   }
+
   8.33% {
     background-position: -500px 0;
   }
+
   10.00% {
     background-position: 0 -100px;
   }
+
   11.67% {
     background-position: -100px -100px;
   }
+
   13.33% {
     background-position: -200px -100px;
   }
+
   15.00% {
     background-position: -300px -100px;
   }
@@ -109,30 +152,39 @@ body {
   16.67% {
     background-position: -400px -100px;
   }
+
   18.33% {
     background-position: -500px -100px;
   }
+
   20.00% {
     background-position: 0 -200px;
   }
+
   21.67% {
     background-position: -100px -200px;
   }
+
   23.33% {
     background-position: -200px -200px;
   }
+
   25.00% {
     background-position: -300px -200px;
   }
+
   26.67% {
     background-position: -400px -200px;
   }
+
   28.33% {
     background-position: -500px -200px;
   }
+
   30.00% {
     background-position: 0 -300px;
   }
+
   31.67% {
     background-position: -100px -300px;
   }
@@ -141,30 +193,39 @@ body {
   33.33% {
     background-position: -200px -300px;
   }
+
   35.00% {
     background-position: -300px -300px;
   }
+
   36.67% {
     background-position: -400px -300px;
   }
+
   38.33% {
     background-position: -500px -300px;
   }
+
   40.00% {
     background-position: 0 -400px;
   }
+
   41.67% {
     background-position: -100px -400px;
   }
+
   43.33% {
     background-position: -200px -400px;
   }
+
   45.00% {
     background-position: -300px -400px;
   }
+
   46.67% {
     background-position: -400px -400px;
   }
+
   48.33% {
     background-position: -500px -400px;
   }
@@ -173,30 +234,39 @@ body {
   50.00% {
     background-position: 0 -500px;
   }
+
   51.67% {
     background-position: -100px -500px;
   }
+
   53.33% {
     background-position: -200px -500px;
   }
+
   55.00% {
     background-position: -300px -500px;
   }
+
   56.67% {
     background-position: -400px -500px;
   }
+
   58.33% {
     background-position: -500px -500px;
   }
+
   60.00% {
     background-position: 0 -600px;
   }
+
   61.67% {
     background-position: -100px -600px;
   }
+
   63.33% {
     background-position: -200px -600px;
   }
+
   65.00% {
     background-position: -300px -600px;
   }
@@ -205,30 +275,39 @@ body {
   66.67% {
     background-position: -400px -600px;
   }
+
   68.33% {
     background-position: -500px -600px;
   }
+
   70.00% {
     background-position: 0 -700px;
   }
+
   71.67% {
     background-position: -100px -700px;
   }
+
   73.33% {
     background-position: -200px -700px;
   }
+
   75.00% {
     background-position: -300px -700px;
   }
+
   76.67% {
     background-position: -400px -700px;
   }
+
   78.33% {
     background-position: -500px -700px;
   }
+
   80.00% {
     background-position: 0 -800px;
   }
+
   81.67% {
     background-position: -100px -800px;
   }
@@ -237,30 +316,39 @@ body {
   83.33% {
     background-position: -200px -800px;
   }
+
   85.00% {
     background-position: -300px -800px;
   }
+
   86.67% {
     background-position: -400px -800px;
   }
+
   88.33% {
     background-position: -500px -800px;
   }
+
   90.00% {
     background-position: 0 -900px;
   }
+
   91.67% {
     background-position: -100px -900px;
   }
+
   93.33% {
     background-position: -200px -900px;
   }
+
   95.00% {
     background-position: -300px -900px;
   }
+
   96.67% {
     background-position: -400px -900px;
   }
+
   98.33% {
     background-position: -500px -900px;
   }
@@ -270,19 +358,26 @@ body {
 header {
   background-color: var(--color-header);
 }
+
 header .inner {
   max-width: 1020px;
   margin: 0 auto;
+  position: relative;
 }
+
 header ul.menu {
   height: 44px;
   display: flex;
   justify-content: space-between;
 }
-header ul.menu li {
+
+header ul.menu>li {
   display: flex;
+  position: relative;
+  transition: 0.4s;
 }
-header ul.menu li a {
+
+header ul.menu>li>a {
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -291,6 +386,225 @@ header ul.menu li a {
   text-decoration: none;
   opacity: 0.8;
 }
-header ul.menu li a:hover {
+
+header ul.menu>li>a:hover {
   opacity: 1;
+}
+
+header ul.menu>li.apple-logo>a,
+header ul.menu>li.search-starter>a,
+header ul.menu>li.basket-starter>a {
+  width: 14px;
+  background-repeat: no-repeat;
+  background-position: center 13px;
+  text-indent: -9999px;
+}
+
+header ul.menu>li.apple-logo>a {
+  background-image: url(../images/header_apple.svg);
+}
+
+header ul.menu>li.search-starter>a {
+  background-image: url(../images/header_search.svg);
+}
+
+header ul.menu>li.basket-starter>a {
+  background-image: url(../images/header_bag.svg);
+}
+
+/* Header -> Menu -> Basket */
+header .basket {
+  width: 290px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background-color: var(--color-white);
+  position: absolute;
+  top: calc(100% + 4px);
+  right: -6px;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+header .basket.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+header .basket .arrow {
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  overflow: hidden;
+}
+
+header .basket .arrow::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+
+header .basket .message {
+  padding: 30px 0;
+  font-size: 13px;
+  color: var(--color-font-darkgray);
+  text-align: center;
+}
+
+header .basket ul {
+  margin-top: 10px;
+}
+
+header .basket ul li {
+  border-top: 1px solid var(--color-border);
+}
+
+header .basket ul li a {
+  display: block;
+  padding: 14px;
+  font-size: 13px;
+  color: var(--color-link);
+}
+
+header .basket ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Header -> Search */
+
+header .search-wrap {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+header .search {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header .search .shadow {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header .search .textfield {
+  position: relative;
+}
+
+header .search input {
+  width: 100%;
+  height: 44px;
+  padding: 0 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 17px;
+  color: var(--color-white);
+  outline: none;
+  box-sizing: border-box;
+}
+
+header .search .search-icon,
+header .search .search-closer {
+  width: 40px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  opacity: .4;
+  cursor: pointer;
+}
+
+header .search .search-icon:hover,
+header .search .search-closer:hover {
+  opacity: 1;
+}
+
+header .search .search-icon {
+  background-image: url(../images/header_search.svg);
+  left: 0;
+}
+
+header .search .search-closer {
+  background-image: url(../images/header_close.svg);
+  right: 0;
+}
+
+header .search .autocompletes {
+  width: 100%;
+  padding: 26px 40px 20px;
+  border-radius: 0 0 18px 18px;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 44px;
+  left: 0;
+  box-sizing: border-box;
+}
+
+header .search .autocompletes h3 {
+  font-size: 12px;
+  color: var(--color-font-darkgray);
+  margin-bottom: 12px;
+}
+
+header .search .autocompletes ul li a {
+  display: block;
+  padding: 10px 0 10px 30px;
+  margin: 0 -14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+header .search .autocompletes ul li:hover a {
+  background-color: var(--color-section);
+  color: var(--color-link);
+}
+
+header .search input,
+header .search .search-icon,
+header .search .autocompletes h3,
+header .search .autocompletes ul li {
+  transition: .6s;
+  transform: translate(100px, 0);
+}
+
+header.searching ul.menu>li {
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+header.searching .search-wrap {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+header.searching .search input,
+header.searching .search .search-icon,
+header.searching .search .autocompletes h3,
+header.searching .search .autocompletes ul li {
+  transition-delay: .2s;
+  transform: translate(0, 0);
 }
