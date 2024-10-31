@@ -1,5 +1,6 @@
 html {
   --color-white: #fff;
+  --color-white-blur: rgba(255, 255, 255, 0.7);
   --color-black: #000;
   --color-font: #1d1d1d;
   --color-font-darkgray: #6e6e6e;
@@ -31,6 +32,30 @@ body {
 a {
   text-decoration: none;
   color: var(--color-font);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--color-link);
+  font-size: 11px;
+  line-height: 1;
+  color: var(--color-white);
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 4px var(--color-link-focus);
 }
 
 .info .icon.icon--chip {
@@ -607,4 +632,53 @@ header.searching .search .autocompletes h3,
 header.searching .search .autocompletes ul li {
   transition-delay: .2s;
   transform: translate(0, 0);
+}
+
+/* Nav */
+nav {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-white-blur);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
+
+nav .inner {
+  max-width: 1000px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+nav h1 {
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+nav .menu {
+  display: flex;
+  gap: 12px;
+  margin-right: 18px;
+}
+
+nav .menu li a {
+  display: block;
+  padding: 6px;
+  font-size: 11px;
+}
+
+nav .menu li a:hover {
+  color: var(--color-link);
+}
+
+nav .menu li.active a {
+  opacity: 0.5;
+  cursor: default;
+}
+
+nav .menu li.active a:hover {
+  color: var(--color-font);
 }
