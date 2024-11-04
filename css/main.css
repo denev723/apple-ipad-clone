@@ -34,6 +34,23 @@ a {
   color: var(--color-font);
 }
 
+img {
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.inner {
+  max-width: 980px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -56,6 +73,51 @@ a {
 
 .btn:focus {
   box-shadow: 0 0 0 4px var(--color-link-focus);
+}
+
+.bgtext {
+  display: block;
+  text-indent: -9999px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+a.link {
+  color: var(--color-link);
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+a.link:hover {
+  text-decoration: underline;
+}
+
+a.link::after {
+  content: " >";
+}
+
+.figures {
+  position: relative;
+}
+
+.figures figure,
+.figures figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.figures figcaption * {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .info .icon.icon--chip {
@@ -382,12 +444,12 @@ a {
 /* Header */
 header {
   background-color: var(--color-header);
+  position: relative;
+  z-index: 9;
 }
 
 header .inner {
   max-width: 1020px;
-  margin: 0 auto;
-  position: relative;
 }
 
 header ul.menu {
@@ -649,7 +711,7 @@ nav .inner {
   height: 52px;
   display: flex;
   align-items: center;
-  margin: 0 auto;
+
 }
 
 nav h1 {
@@ -681,4 +743,77 @@ nav .menu li.active a {
 
 nav .menu li.active a:hover {
   color: var(--color-font);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--color-font-lightgray);
+}
+
+.hero .inner {
+  padding-bottom: 110px;
+}
+
+.hero h1 {
+  width: 221px;
+  height: 91px;
+  background-image: url(../images/hero_ipad_text.png);
+  position: absolute;
+  transform: translate(624px, 235px);
+  z-index: 1;
+}
+
+.hero .figures {
+  height: 800px;
+}
+
+.hero figure {
+  transform: translate(74px, -64px);
+}
+
+.hero figure figcaption .caption-camera {
+  width: 120px;
+  height: 84px;
+  background-image: url(../images/hero_ipad_caption_camera.png);
+  transform: translate(43px, 580px);
+}
+
+.hero figure figcaption .caption-chip {
+  width: 95px;
+  height: 43px;
+  background-image: url(../images/hero_ipad_caption_chip.png);
+  transform: translate(589px, 510px);
+}
+
+.hero figure figcaption .caption-storage {
+  width: 80px;
+  height: 43px;
+  background-image: url(../images/hero_ipad_caption_storage.png);
+  transform: translate(627px, 631px);
+}
+
+.hero h2 {
+  width: 738px;
+  height: 145px;
+  margin: 0 auto;
+  background-image: url(../images/hero_headline.png);
+}
+
+.hero p.price {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.hero p.description {
+  width: 80%;
+  margin: 18px auto 0;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.hero .links {
+  margin-top: 30px;
 }
