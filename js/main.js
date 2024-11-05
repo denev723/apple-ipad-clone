@@ -69,3 +69,19 @@ function hideSearch() {
     searchInputEl.value = "";
   }, 600);
 }
+
+// 요소의 가시성 관찰 로직!
+const io = new IntersectionObserver((entries) => {
+  // entries는 `io.observe(el)`로 등록된 모든 관찰 대상 배열.
+  entries.forEach((entry) => {
+    // 사라질 때.
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.add("show");
+  });
+});
+// 관찰할 요소들 검색
+const infoEls = document.querySelectorAll(".info");
+// 관찰 시작!
+infoEls.forEach((el) => io.observe(el));

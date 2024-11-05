@@ -21,7 +21,6 @@ html.fixed {
 }
 
 body {
-  height: 10000px;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -103,7 +102,12 @@ a.link::after {
   content: " >";
 }
 
+.feature {
+  display: flex;
+}
+
 .figures {
+  flex-grow: 1;
   position: relative;
 }
 
@@ -118,6 +122,41 @@ a.link::after {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.infos.infos--center {
+  justify-content: center;
+}
+
+.infos.infos--end {
+  justify-content: flex-end;
+}
+
+.info {
+  max-width: 330px;
+  margin-bottom: 24px;
+  transition: 1s;
+  transform: translate(0, 100px);
+  opacity: 0;
+}
+
+.info.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.info .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 0 -15px -30px;
+  animation: sprite-icon 3s steps(1) infinite;
 }
 
 .info .icon.icon--chip {
@@ -190,6 +229,12 @@ a.link::after {
 
 .info .icon.icon--covers {
   background-image: url("../images/sprite_covers.png");
+}
+
+.info p {
+  font-weight: 600;
+  font-size: 21.5px;
+  line-height: 1.5;
 }
 
 @keyframes sprite-icon {
@@ -816,4 +861,114 @@ nav .menu li.active a:hover {
 
 .hero .links {
   margin-top: 30px;
+}
+
+/* Power - Multiple Apps */
+.power {
+  margin-top: 110px;
+}
+
+.power .multiple-apps h1 {
+  width: 500px;
+  height: 280px;
+  background-image: url(../images/power_headline.png);
+  transform: translate(104px, 0);
+}
+
+.power .multiple-apps .figures {
+  height: 773px;
+}
+
+.power .multiple-apps figcaption {
+  width: 138px;
+  height: 46px;
+  background-image: url(../images/power_multiple_apps_caption.png);
+  transform: translate(703px, -47px);
+}
+
+/* Power - Arcade */
+.power .arcade {
+  margin-top: 55px;
+}
+
+.power .arcade .figures {
+  height: 600px;
+}
+
+.power .arcade figure {
+  transform: translate(-347px, -90px);
+}
+
+.power .arcade figcaption {
+  width: 150px;
+  height: 77px;
+  background-image: url(../images/power_arcade_caption.png);
+  transform: translate(483px, 653px);
+}
+
+/* Power - Create */
+
+.power .create {
+  margin-top: 55px;
+}
+
+.power .create .figures {
+  height: 772px;
+}
+
+.power .create figure {
+  transform: translate(-25px, 50px);
+}
+
+.power .create figcaption {
+  width: 142px;
+  height: 46px;
+  background-image: url(../images/power_create_caption.png);
+  transform: translate(543px, 908px);
+}
+
+/* Display - Notes */
+
+.display {
+  margin-top: 450px;
+}
+
+.display .notes h1 {
+  width: 630px;
+  height: 370px;
+  background-image: url(../images/display_headline.png);
+  transform: translate(104px, 0);
+}
+
+.display .notes .figures {
+  height: 814px;
+  margin-top: 26px;
+}
+
+.display .notes figcaption {
+  width: 145px;
+  height: 45px;
+  background-image: url(../images/display_notes_caption.png);
+  transform: translate(707px, -16px);
+}
+
+/* Display - SharePlay */
+
+.display .shareplay {
+  margin-top: 55px;
+}
+
+.display .shareplay .figures {
+  height: 630px;
+}
+
+.display .shareplay figure {
+  transform: translate(-360px, 0);
+}
+
+.display .shareplay figcaption {
+  width: 110px;
+  height: 48px;
+  background-image: url(../images/display_shareplay_caption.png);
+  transform: translate(300px, 658px);
 }
