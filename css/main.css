@@ -26,6 +26,8 @@ body {
   line-height: 1;
   color: var(--color-font);
   word-break: keep-all;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {
@@ -152,6 +154,10 @@ a.link::after {
   opacity: 1;
 }
 
+.infos--large .info {
+  max-width: 410px;
+}
+
 .info .icon {
   width: 100px;
   height: 100px;
@@ -235,6 +241,12 @@ a.link::after {
   font-weight: 600;
   font-size: 21.5px;
   line-height: 1.5;
+}
+
+.info a.link {
+  display: block;
+  margin-top: 44px;
+  font-size: 19.5px;
 }
 
 @keyframes sprite-icon {
@@ -971,4 +983,358 @@ nav .menu li.active a:hover {
   height: 48px;
   background-image: url(../images/display_shareplay_caption.png);
   transform: translate(300px, 658px);
+}
+
+/* Camera */
+.camera {
+  margin-top: 303px;
+}
+
+/* Camera - Stage */
+.camera .stage {
+  position: relative;
+}
+
+.camera .stage h1 {
+  width: 650px;
+  height: 450px;
+  background-image: url(../images/camera_headline.png);
+  transform: translate(-25px, 0);
+}
+
+.camera .stage .info {
+  position: absolute;
+  top: 150px;
+  right: 0;
+}
+
+.camera .stage .figures {
+  height: 770px;
+  margin-top: 24px;
+}
+
+.camera .stage figure {
+  transform: translate(90px, 0);
+}
+
+.camera .stage figure video {
+  position: absolute;
+  top: 36px;
+  left: 76px;
+  -webkit-mask-image: url(../images/camera_video_mask.png);
+  mask-image: url(../images/camera_video_mask.png);
+}
+
+.camera .stage figure .controller--play,
+.camera .stage figure .controller--pause {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-link);
+  cursor: pointer;
+  transform: translate(420px, -134px) rotate(-3deg);
+}
+
+.camera .stage figure .controller--play:hover,
+.camera .stage figure .controller--pause:hover {
+  text-decoration: underline;
+}
+
+.camera .stage figure .controller--play.hide,
+.camera .stage figure .controller--pause.hide {
+  display: none;
+}
+
+.camera .stage figure .controller--play img,
+.camera .stage figure .controller--pause img {
+  width: 20px;
+  margin-top: -2px;
+}
+
+.camera .stage figcaption {
+  width: 130px;
+  height: 110px;
+  background-image: url(../images/camera_hardware_caption.png);
+  transform: translate(-116px, 383px);
+}
+
+/* Camera - Edit */
+
+.camera .edit .figures {
+  height: 910px;
+}
+
+.camera .edit figure {
+  transform: translate(20px, 0);
+}
+
+.camera .edit figcaption {
+  width: 130px;
+  height: 47px;
+  background-image: url(../images/camera_edit_caption.png);
+  transform: translate(27px, 905px);
+}
+
+/* Wireless */
+.wireless {
+  margin-top: 202px;
+}
+
+/* Wireless - FaceTime */
+.wireless .facetime h1 {
+  width: 730px;
+  height: 330px;
+  background-image: url(../images/wireless_headline.png);
+  transform: translate(104px, 0);
+}
+
+.wireless .facetime .figures {
+  height: 773px;
+}
+
+.wireless .facetime figure {
+  transform: translate(-60px, 0);
+}
+
+.wireless .facetime figcaption {
+  width: 130px;
+  height: 46px;
+  background-image: url(../images/wireless_facetime_caption.png);
+  transform: translate(843px, -49px);
+}
+
+/* Wireless - Files */
+
+.wireless .files figure {
+  transform: translate(34px, -34px);
+}
+
+.wireless .files figcaption {
+  width: 127px;
+  height: 46px;
+  background-image: url(../images/wireless_files_caption.png);
+  transform: translate(96px, 639px);
+}
+
+/* Accessories */
+.accessories {
+  margin-top: 195px;
+}
+
+.accessories h1 {
+  width: 550px;
+  height: 343px;
+  margin: 0 auto;
+  background-image: url(../images/accessories_headline.png);
+}
+
+.accessories .figures {
+  height: 1021px;
+  margin-top: 34px;
+}
+
+.accessories figure {
+  transform: translate(-24px, 0);
+}
+
+.accessories figcaption .caption-memo {
+  width: 169px;
+  height: 41px;
+  background-image: url(../images/accessories_caption_memo.png);
+  transform: translate(790px, -52px);
+}
+
+.accessories figcaption .caption-supports {
+  width: 200px;
+  height: 70px;
+  background-image: url(../images/accessories_caption_supports.png);
+  transform: translate(163px, 821px);
+}
+
+.accessories .infos {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* iPadOS */
+.ipados {
+  margin-top: 212px;
+}
+
+.ipados h1 {
+  width: 530px;
+  height: 400px;
+  margin: 0 auto;
+  background-image: url(../images/ipados_headline.png);
+}
+
+.ipados .infos {
+  align-items: flex-end;
+  margin-top: 44px;
+}
+
+.ipados .figures {
+  height: 782px;
+  display: flex;
+}
+
+.ipados .figures>div {
+  flex-grow: 1;
+  position: relative;
+}
+
+.ipados .figure-split-view figure {
+  transform: translate(-205px, -312px);
+}
+
+.ipados .figure-split-view figcaption {
+  width: 163px;
+  height: 53px;
+  background-image: url(../images/ipados_split_view_caption.png);
+  transform: translate(200px, -38px);
+}
+
+.ipados .figure-widgets figure {
+  transform: translate(237px, 43px);
+}
+
+.ipados .figure-widgets figcaption {
+  width: 161px;
+  height: 46px;
+  background-image: url(../images/ipados_widgets_caption.png);
+  transform: translate(257px, 497px);
+}
+
+.ipados .figure-quick-note figure {
+  transform: translate(-625px, 232px);
+}
+
+.ipados .figure-quick-note figcaption {
+  width: 82px;
+  height: 97px;
+  background-image: url(../images/ipados_quick_note_caption.png);
+  transform: translate(511px, 470px);
+}
+
+/* Apps */
+.apps {
+  margin-top: 368px;
+}
+
+.apps h1 {
+  width: 500px;
+  height: 264px;
+  background-image: url(../images/apps_headline.png);
+  transform: translate(17px, 0);
+}
+
+.apps .infos {
+  margin-top: 36px;
+  margin-left: 82px;
+}
+
+.apps .figures {
+  height: 788px;
+  display: flex;
+}
+
+.apps .figures>div {
+  flex-grow: 1;
+  position: relative;
+}
+
+.apps .figure-masterclass figure {
+  transform: translate(578px, -431px);
+}
+
+.apps .figure-masterclass figcaption {
+  width: 100px;
+  height: 25px;
+  background-image: url(../images/apps_masterclass_caption.png);
+  transform: translate(26px, 690px);
+}
+
+.apps .figure-adobe figure {
+  transform: translate(-515px, 85px);
+}
+
+.apps .figure-adobe figcaption {
+  width: 105px;
+  height: 24px;
+  background-image: url(../images/apps_adobe_caption.png);
+  transform: translate(544px, 514px);
+}
+
+.apps .figure-fantasian figure {
+  transform: translate(103px, 318px);
+}
+
+.apps .figure-fantasian figcaption {
+  width: 74px;
+  height: 22px;
+  background-image: url(../images/apps_fantasian_caption.png);
+  transform: translate(24px, 483px);
+}
+
+.apps .figure-books figure {
+  transform: translate(-133px, -150px);
+}
+
+.apps .figure-books figcaption {
+  width: 50px;
+  height: 27px;
+  background-image: url(../images/apps_books_caption.png);
+  transform: translate(397px, 707px);
+}
+
+.apps .figure-goodnotes figure {
+  transform: translate(-93px, 68px);
+}
+
+.apps .figure-goodnotes figcaption {
+  width: 99px;
+  height: 26px;
+  background-image: url(../images/apps_goodnotes_caption.png);
+  transform: translate(24px, 690px);
+}
+
+/* Privacy */
+.privacy {
+  margin-top: 238px;
+}
+
+.privacy h1 {
+  width: 482px;
+  height: 237px;
+  margin-left: auto;
+  background-image: url(../images/privacy_headline.png);
+  position: relative;
+  transform: translate(57px, 0);
+  z-index: 1;
+}
+
+.privacy .infos {
+  align-items: flex-end;
+  margin-top: 38px;
+  position: relative;
+  z-index: 1;
+}
+
+.privacy figure {
+  transform: translate(-215px, -500px);
+}
+
+.privacy figcaption .caption-apple-id {
+  width: 170px;
+  height: 26px;
+  background-image: url(../images/privacy_caption_apple_id.png);
+  transform: translate(195px, -13px);
+}
+
+.privacy figcaption .caption-touch-id {
+  width: 150px;
+  height: 31px;
+  background-image: url(../images/privacy_caption_touch_id.png);
+  transform: translate(533px, 485px);
 }

@@ -85,3 +85,19 @@ const io = new IntersectionObserver((entries) => {
 const infoEls = document.querySelectorAll(".info");
 // 관찰 시작!
 infoEls.forEach((el) => io.observe(el));
+
+const video = document.querySelector(".stage video");
+const playBtn = document.querySelector(".stage .controller--play");
+const pauseBtn = document.querySelector(".stage .controller--pause");
+
+playBtn.addEventListener("click", () => {
+  video.play();
+  playBtn.classList.add("hide");
+  pauseBtn.classList.remove("hide");
+});
+
+pauseBtn.addEventListener("click", () => {
+  video.pause();
+  playBtn.classList.remove("hide");
+  pauseBtn.classList.add("hide");
+});
