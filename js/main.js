@@ -40,12 +40,15 @@ const searchInputEl = searchWrapEl.querySelector("input");
 
 searchStarterEl.addEventListener("click", showSearch);
 
-searchCloserEl.addEventListener("click", hideSearch);
+searchCloserEl.addEventListener("click", (e) => {
+  e.stopPropagation();
+  hideSearch();
+});
 
 shadowEl.addEventListener("click", hideSearch);
 
 function showSearch() {
-  document.documentElement.classList.add("fixed");
+  stopScroll();
   headerEl.classList.add("searching");
   headerMenuEls.reverse().forEach((el, index) => {
     el.style.transitionDelay = `${(0.4 * index) / headerMenuEls.length}s`;
@@ -59,7 +62,7 @@ function showSearch() {
 }
 
 function hideSearch() {
-  document.documentElement.classList.remove("fixed");
+  playScroll();
   headerEl.classList.remove("searching");
   headerMenuEls.reverse().forEach(function (el, index) {
     el.style.transitionDelay = `${(0.4 * (index + 1)) / headerMenuEls.length}s`;
@@ -68,9 +71,75 @@ function hideSearch() {
     el.style.transitionDelay = `${(index * 0.4) / searchDelayEls.length}s`;
   });
   searchDelayEls.reverse();
-  setTimeout(() => {
+  searchInputEl.value = "";
+}
+
+function playScroll() {
+  document.documentElement.classList.remove("fixed");
+}
+
+function stopScroll() {
+  document.documentElement.classList.add("fixed");
+}
+
+const menuStarterEl = document.querySelector("header .menu-starter");
+menuStarterEl.addEventListener("click", function () {
+  if (headerEl.classList.contains("menuing")) {
+    headerEl.classList.remove("menuing");
     searchInputEl.value = "";
-  }, 600);
+    playScroll();
+  } else {
+    headerEl.classList.add("menuing");
+    stopScroll();
+  }
+});
+
+const searchTextFieldEl = document.querySelector("header .textfield");
+const searchCanceEl = document.querySelector("header .search-canceler");
+
+searchTextFieldEl.addEventListener("click", function () {
+  headerEl.classList.add("searching--mobile");
+  searchInputEl.focus();
+});
+
+searchCanceEl.addEventListener("click", function () {
+  headerEl.classList.remove("searching--mobile");
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 740) {
+    headerEl.classList.remove("searching");
+  } else {
+    headerEl.classList.remove("searching--mobile");
+  }
+});
+
+const navEl = document.querySelector("nav");
+const navMenuToggleEl = navEl.querySelector(".menu-toggler");
+const navMenuShadowEl = navEl.querySelector(".shadow");
+
+navMenuToggleEl.addEventListener("click", () => {
+  if (navEl.classList.contains("menuing")) {
+    hideNavMenu();
+  } else {
+    showNavMenu();
+  }
+});
+
+navEl.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+navMenuShadowEl.addEventListener("click", hideNavMenu);
+
+window.addEventListener("click", hideNavMenu);
+
+function showNavMenu() {
+  navEl.classList.add("menuing");
+}
+
+function hideNavMenu() {
+  navEl.classList.remove("menuing");
 }
 
 // 요소의 가시성 관찰 로직!
